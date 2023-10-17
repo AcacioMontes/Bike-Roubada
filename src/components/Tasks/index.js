@@ -16,7 +16,7 @@ import excluir from '../../assets/images/delete.png';
 import edit from '../../assets/images/edit.png';
 import { FlatList, TouchableOpacity } from 'react-native';
 
-export default function Tasks({ tasks, onDeleteTask, onEditTask, onChangeStatusTask }) {
+export default function Tasks({ tasks, onConfirmDeleteTask, onEditTask, onChangeStatusTask }) {
 
   return (
     <FlatList
@@ -42,7 +42,7 @@ export default function Tasks({ tasks, onDeleteTask, onEditTask, onChangeStatusT
                 <TaskIcon source={edit} />
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => { onDeleteTask(task) }}>
+              <TouchableOpacity onPress={() => { onConfirmDeleteTask(task) }}>
                 <TaskIcon source={excluir} />
               </TouchableOpacity>
             </TaskAction>

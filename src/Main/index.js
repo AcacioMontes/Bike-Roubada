@@ -6,8 +6,13 @@ import Header from '../components/Header';
 import Tasks from '../components/Tasks';
 import AddTaskButton from '../components/AddTaskButton';
 import DeleteConfirmModal from '../components/DeleteConfirmModal';
+import { useState } from 'react';
+import NewTaskModal from '../components/NewTaskModal';
 
 export default function Main() {
+  const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+  const [isNewTaskModalVisible, setIsNewTaskModalVisible] = useState(false);
+
   function handleChangeSatusTask() {
     alert('Alterar Status Tarefa');
   }
@@ -16,8 +21,13 @@ export default function Main() {
     alert('Alterar Tarefa');
   }
 
-  function handleConfirmDeleteTask() {
-    alert('Deletar Tarefa');
+  function handleConfirmDeleteTask(task) {
+    setIsDeleteModalVisible(true);
+  }
+
+  function handleDeleteTask() {
+    //Requisição Delete
+    setIsDeleteModalVisible(false);
   }
 
   return (
@@ -28,14 +38,23 @@ export default function Main() {
         <Tasks
           tasks={tasks}
           onChangeStatusTask={handleChangeSatusTask}
-          onDeleteTask={handleConfirmDeleteTask}
+          onConfirmDeleteTask={handleConfirmDeleteTask}
           onEditTask={handleEditTask}
         />
       </TasksContainer>
 
-      <AddTaskButton onPress={() => alert('Add')} />
+      <AddTaskButton onPress={() => setIsNewTaskModalVisible(true)} />
 
-      <DeleteConfirmModal />
+      <DeleteConfirmModal
+        onClose={() => setIsDeleteModalVisible(false)}
+        visible={isDeleteModalVisible}
+        onConfirm={handleDeleteTask}
+      />
+
+      <NewTaskModal
+        visible={isNewTaskModalVisible}
+        onClose={() => setIsNewTaskModalVisible(false)}
+      />
     </Container>
   );
 }
