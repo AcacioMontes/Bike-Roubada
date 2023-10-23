@@ -10,4 +10,10 @@ export const Container = styled.SafeAreaView`
 
 export const TasksContainer = styled.View`
   flex: 1;
-`; 
+`;
+
+export const CenteredContainer = styled.View`
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+`;

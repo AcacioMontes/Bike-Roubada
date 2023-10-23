@@ -10,7 +10,7 @@ export default function CustomModal({ children, visible, onClose }) {
       transparent
       statusBarTranslucent
     >
-      <Overlay>
+      <Overlay behavior='padding'>
         <ModalBody>
           {children}
         </ModalBody>
