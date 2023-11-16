@@ -13,7 +13,7 @@ export default function EditTaskModal({ visible, onClose, onSave, task }) {
       onClose={onClose}
     >
       <Header>
-        <Text weight={600}>Alterar Tarefa</Text>
+        <Text weight={600}>Alterar cadastro da bike </Text>
 
         <TouchableOpacity onPress={onClose}>
           <Image source={close} />

@@ -16,6 +16,21 @@ export const TaskHeader = styled.View`
 export const TaskDescription = styled.View`
 
 `;
+export const TaskCpf = styled.View`
+
+`;
+export const TaskTelefone = styled.View`
+
+`;
+export const TaskData = styled.View`
+
+`;
+export const TaskEmail = styled.View`
+
+`;
+export const Taskendereco = styled.View`
+
+`;
 
 export const TaskFooter = styled.View`
   flex-direction: row;
@@ -40,4 +55,5 @@ export const TaskIcon = styled.Image`
   width: 16px;
   height: 16px;
   resize-mode: contain;
+  
 `;

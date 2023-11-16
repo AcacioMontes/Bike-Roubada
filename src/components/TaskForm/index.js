@@ -5,16 +5,19 @@ import Button from "../Button"
 import { Form, Input } from "./styles";
 
 export default function TaskForm({ buttonLabel, onSave, task }) {
-  const [title, setTitle] = useState(task?.title ?? '');
+  const [numSerie, setnumSerie] = useState(task?.name ?? '');
   const [description, setDescription] = useState(task?.description ?? '');
+  const [name, setName] = useState(task?.name ?? '');
+  const [insertImage, setInsertName] = useState(task?.name ?? '');
+
 
   return (
     <Form>
       <Input
-        placeholder="Título"
+        placeholder="Nome"
         placeholderTextColor="#666"
-        value={title}
-        onChangeText={setTitle}
+        value={name}
+        onChangeText={setName}
       />
 
       <Input
@@ -23,10 +26,22 @@ export default function TaskForm({ buttonLabel, onSave, task }) {
         value={description}
         onChangeText={setDescription}
       />
+      <Input
+        placeholder="Número de série"
+        placeholderTextColor="#666"
+        value={numSerie}
+        onChangeText={setnumSerie}
+      />
+      <Input
+        placeholder="Inserir imagem"
+        placeholderTextColor="#666"
+        value={insertImage}
+        onChangeText={setInsertName}
 
+      />
       <Button
-        onPress={() => onSave({ title, description })}
-        disabled={title.length === 0 || description.length === 0}
+        onPress={() => onSave({ name, description, numSerie, insertImage })}
+        disabled={name.length === 0 || description.length === 0 || numSerie.length === 0 || insertImage.length === 0} 
       >
         {buttonLabel}
       </Button>

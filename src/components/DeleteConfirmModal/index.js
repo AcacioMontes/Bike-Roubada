@@ -7,7 +7,7 @@ export default function DeleteConfirmModal({ visible, onClose, onConfirm }) {
   return (
     <CustomModal visible={visible} onClose={onClose}>
       <Text size={18} weight="600">
-        Tem certeza que deseja remover a tarefa?
+        Tem certeza que deseja remover a bike?
       </Text>
       <Text opacity={0.5} style={{ marginTop: 4 }}>
         Essa ação não podera ser desfeita

@@ -13,7 +13,7 @@ export default function NewTaskModal({ visible, onClose, onSave }) {
       onClose={onClose}
     >
       <Header>
-        <Text weight={600}>Adicionar Tarefa</Text>
+        <Text weight={600}>Cadastrar bike</Text>
 
         <TouchableOpacity onPress={onClose}>
           <Image source={close} />
@@ -22,6 +22,7 @@ export default function NewTaskModal({ visible, onClose, onSave }) {
 
       <TaskForm
         buttonLabel="Cadastrar"
+        
         onSave={onSave}
       />
     </CustomModal>

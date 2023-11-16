@@ -1,33 +1,91 @@
 export const tasks = [
   {
     id: '1',
-    title: 'Estudar React Native',
-    description: 'Fazer a atividade passada na ultima aula',
+    name: 'tiago',
+    description: 'Bike roubada na rua tal',
     done: false,
     data: '2023-03-27 08:00',
+    cpf: '1111111',
+    email: 'joao@df.com',
+    telefone: '3456788',
   },
 
   {
     id: '2',
-    title: 'Lavar meu Carro',
-    description: 'Lavar meu carro no final da tarde',
+    name: 'Bruno',
+    description: 'Bike roubada na rua tal',
     done: false,
     data: '2023-03-27 08:15',
+    cpf: '22222',
+    email: 'bruno@df.com',
+    telefone: '3456788',
   },
 
   {
     id: '3',
-    title: 'Reunião Trabalho',
-    description: 'Preparar o material para a reunião de discussão do novo projeto a ser realizado',
+    name: 'Tiago',
+    description: 'Bike roubada na rua tal',
     done: true,
     data: '2023-03-27 08:30',
+    cpf:'333333',
+    email: 'tiago@df.com',
+    telefone: '3456788',
   },
 
   {
     id: '4',
-    title: 'Ir ao Supermercado',
-    description: 'Comprar: Açucar, Café e Pão',
+    name: 'José',
+    description: 'Bike roubada na rua tal',
     done: false,
     data: '2023-03-27 08:30',
+    cpf:'4444444',
+    email: 'jose@df.com',
+    telefone: '3456788',
+  },
+];
+
+export const bikes = [
+  {
+    id: '1',
+    nome: 'João',
+    description: 'rua A',
+    done: false,
+    data: '2023-03-27 08:00',
+    cpf: '1111111',
+    email: 'joao@df.com',
+    telefone: '3456788',
+  },
+
+  {
+    id: '2',
+    nome: 'Bruno',
+    description: 'Rua B',
+    done: false,
+    data: '2023-03-27 08:15',
+    cpf: '22222',
+    email: 'bruno@df.com',
+    telefone: '3456788',
+  },
+
+  {
+    id: '3',
+    nome: 'Tiago',
+    description: 'Rua c',
+    done: true,
+    data: '2023-03-27 08:30',
+    cpf:'333333',
+    email: 'tiago@df.com',
+    telefone: '3456788',
+  },
+
+  {
+    id: '4',
+    nome: 'José',
+    description: 'Rua d',
+    done: false,
+    data: '2023-03-27 08:30',
+    cpf:'4444444',
+    email: 'jose@df.com',
+    telefone: '3456788',
   },
 ];

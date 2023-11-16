@@ -1,6 +1,6 @@
 import { CenteredContainer, Container, TasksContainer } from './styles';
 
-import { tasks } from '../mocks/tasks';
+import { bikes, tasks } from '../mocks/tasks';
 
 import Header from '../components/Header';
 import Tasks from '../components/Tasks';
@@ -10,16 +10,17 @@ import { useState } from 'react';
 import NewTaskModal from '../components/NewTaskModal';
 import EditTaskModal from '../components/EditTaskModal';
 import { ActivityIndicator } from 'react-native';
-
 export default function Main() {
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [isNewTaskModalVisible, setIsNewTaskModalVisible] = useState(false);
   const [isEditTaskModalVisible, setIsEditTaskModalVisible] = useState(false);
   const [taskBeingEdit, setTaskBeingEdit] = useState();
   const [isLoading, setIsLoading] = useState(false);
-
+ 
+ 
+  
   function handleChangeSatusTask() {
-    alert('Alterar Status Tarefa');
+    
   }
 
   function handleEditTask(task) {
@@ -57,6 +58,10 @@ export default function Main() {
             onChangeStatusTask={handleChangeSatusTask}
             onConfirmDeleteTask={handleConfirmDeleteTask}
             onEditTask={handleEditTask}
+            onCadastroBike={handleChangeSatusTask}
+            
+
+            
           />
         </TasksContainer>
       )}
@@ -87,6 +92,15 @@ export default function Main() {
         onSave={handleSaveEditTaks}
         task={taskBeingEdit}
       />
+  
+
+      
+      
+      
+
+      
+
+      
     </Container>
   );
 }
