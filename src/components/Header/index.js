@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <Container>
       <Text size={20} color= "red" fontWeight="bold" textAlign= 'center'>
-        Bike Roubadas cadastradas ou recuperadas.
+        Bike roubadas ou recuperadas.
         
       </Text>
 

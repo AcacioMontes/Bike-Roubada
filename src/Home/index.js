@@ -7,24 +7,27 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 function Home({navigation}){
     return(
         <KeyboardAvoidingView style={styles.background}>
-                <View>
-                    <Image 
-                    source={require('./src/assets/images/bicicleta.png')}/>
+                <View style={styles.areaView}>
+                
                     
+                    <Text style={styles.nomeDesign}> Bike Roubada </Text>
                 </View>
-                <View style={styles.container}>
+                <View>
                     
                     <TextInput 
                     style={styles.input}
-                    placeholder="Usuário"
+                    placeholder="Insira seu usuário"
                     autoCorrect={false}
+                    secureTextEntry={true}
+
                     onChangeText={() => {}}
                     />
                      <TextInput 
                     style={styles.input}
 
-                    placeholder="Senha"
+                    placeholder="Insira sua senha"
                     autoCorrect={false}
+                    secureTextEntry={true}
                     onChangeText={() => {}}
                     />
                     <TouchableOpacity 
@@ -37,8 +40,11 @@ function Home({navigation}){
 
                     <TouchableOpacity
                     style={styles.btnRegister}
+                    title="Sobre"
+                    onPress={ () => navigation.navigate("Sobre", {nome: "José"})}
                     >
                         <Text style={styles.registerText}>Criar conta gratuita</Text>
+                        
                     </TouchableOpacity>
                     
                     
@@ -53,7 +59,8 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:"center",
-        backgroundColor: '#191919'
+        backgroundColor: '#ffffff'
+        
     },
     container:{
         flex:1,
@@ -70,10 +77,15 @@ const styles = StyleSheet.create({
        fontSize: 17,
        borderRadius: 7,
        padding: 10,
+       borderWidth: 1,
+       borderColor: '#EEEEEE',
+       alignItems: "center",
+       justifyContent: "center"
+ 
     },
     btnSubmit: {
-        backgroundColor: '#348EAC',
-        width: '90',
+        backgroundColor: '#ff0000',
+        width: '90%',
         height: 45,
         alignItems: "center",
         justifyContent: "center",
@@ -81,15 +93,29 @@ const styles = StyleSheet.create({
     },
     submitText: {
         color: "#FFF",
-        fontWeight: "bold",
+        
         fontSize: 18,
     },
     btnRegister: {
        marginTop: 10,
     },
     registerText: {
-        color: '#fff'
-    }
+        color: '#222',
+        textAlign: 'center',
+        justifyContent: 'center'
+
+    },
+    nomeDesign: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 40,
+        lineHeight:150,
+    
+        color: '#ff0000'
+
+    },
+    
+
     
 })   
     

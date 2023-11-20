@@ -1,10 +1,11 @@
 import React from "react";
 import {View, Text} from 'react-native';
 
-export default function Sobre(){
+export default function Sobre({route}){
     return(
         <View>
-            <Text> Home </Text>
+            <Text> Nome:{route.params?.nome} </Text>
+            <Text>Cpf:{route.params.cpf}</Text>
         </View>
     )
 }

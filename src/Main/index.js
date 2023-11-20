@@ -1,6 +1,6 @@
 import { CenteredContainer, Container, TasksContainer } from './styles';
-
-import { bikes, tasks } from '../mocks/tasks';
+import {Alert} from 'react-native';
+import {tasks } from '../mocks/tasks';
 
 import Header from '../components/Header';
 import Tasks from '../components/Tasks';
@@ -20,7 +20,7 @@ export default function Main() {
  
   
   function handleChangeSatusTask() {
-    
+    Alert.alert('Bike recuperada');
   }
 
   function handleEditTask(task) {
@@ -92,6 +92,7 @@ export default function Main() {
         onSave={handleSaveEditTaks}
         task={taskBeingEdit}
       />
+      
   
 
       
