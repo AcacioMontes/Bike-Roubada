@@ -41,7 +41,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} /> 
         <Stack.Screen name="Main" component={Main} />
-        <Stack.Screen name="QrCode" component={QrCode} />
+        <Stack.Screen name="Sobre" component={Sobre} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -40,8 +40,8 @@ function Home({navigation}){
 
                     <TouchableOpacity
                     style={styles.btnRegister}
-                    title="QRCode"
-                    onPress={ () => navigation.navigate("QrCode")}
+                    title="Sobre"
+                    onPress={ () => navigation.navigate("Sobre", {nome: "José"})}
                     >
                         <Text style={styles.registerText}>Criar conta gratuita</Text>
                         
@@ -118,4 +118,4 @@ const styles = StyleSheet.create({
 
     
 })   
-    
+ 
